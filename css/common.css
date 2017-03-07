@@ -1,0 +1,218 @@
+/* //////////////////// 初期設定 //////////////////// */
+body {
+    font-family: 'Osaka－等幅',"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/* //////////////////// navbarをセンターリング //////////////////// */
+/* サイトタイトル */
+.sitetitle {
+    margin:15px 0 15px;
+}
+.sitetitle a {
+    font-size: 1.6em;
+    color: inherit;
+}
+/* ナビゲーションメニュー */
+.navbar .navbar-inner {
+    padding: 0;
+}
+.navbar .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+.navbar .nav li {
+    display: table-cell;
+    float: none;
+}
+.navbar .nav li a {
+    font-weight: bold;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, .75);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+}
+.navbar .nav li:last-child a {
+    border-right: 0;
+    border-radius: 0 3px 3px 0;
+}
+.navbar .nav li:first-child a { /* HOMEの右border打ち消し */
+    border-left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* //////////////////// ナビゲーションメニュー //////////////////// */
+.navbar {
+    background-color: #90D7ED;
+    border-radius: 0px; /* 角丸打ち消し */
+    margin-bottom: 0px;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #f6f6f6;
+}
+.navbar-collapse {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:active,
+.navbar-default .navbar-nav>.active>a:visited {
+    background-color: #90D7ED;
+}
+/*  ハンバーガーメニュー */
+/*  -----  @media screen and (max-width: 767px)ここから  -----  */
+@media screen and (max-width: 767px){
+    .navbar .nav li {
+        display : list-item;
+    }
+    .navbar .nav li a {
+        border-left: 0;
+        border-right: 0;
+    }
+    .navbar-default .navbar-toggle:hover {
+        background-color: transparent;
+    }
+    .navbar .nav li a {
+        text-align: left;
+    }
+    .navbar .nav li .glyphicon {
+        float: right;
+        color: #f6f6f6;
+        padding-top: 1px;
+    }
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+/*  -----  @media screen and (max-width: 767px)ここまで  -----  */
+
+/* スマホ用電話アイコン */
+.navbar .icn_tel{
+    float: left;
+    /* glyhpiconsを使わずに画像にする場合は消す（ここから） */
+        color:#888;
+        font-size:1.5em;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    /* glyhpiconsを使わずに画像にする場合は消す（ここまで） */
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.navbar .icn_mail{
+    float: left;
+    /* glyhpiconsを使わずに画像にする場合は消す（ここから） */
+        color:#888;
+        font-size:1.5em;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    /* glyhpiconsを使わずに画像にする場合は消す（ここまで） */
+}
+
+/* //////////////////// リンクボックス //////////////////// */
+.linkbox_mgn {
+    margin-top: 15px;
+}
+.linkbox_1 {
+    padding-right: 0px;
+}
+.linkbox_2,
+.linkbox_3 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.linkbox_4 {
+    padding-left: 0px;
+}
+.linkbox {
+    display: block;
+    color: #90d7ed;
+    border-top: 1px solid #868686;
+    border-right: 1px solid #868686;
+    border-bottom: 1px solid #868686;
+    padding-bottom: 15px;
+}
+.linkbox:link {
+    text-decoration: none;
+}
+.linkbox:hover {
+    background-color: #f0f0f0;
+    color: #90d7ed;
+}
+.linkbox_1 .linkbox {
+    border-left: 1px solid #868686;
+}
+/*  -----  @media screen and (max-width: 767px)ここから  -----  */
+@media screen and (max-width: 767px){
+    /* 3つの場合
+    .linkbox_1 {
+        padding-right: 15px;
+    }
+    */
+    .linkbox_2 {
+        /* 3つの場合
+        padding-left: 15px;
+        */
+        padding-right: 15px;
+    }
+    .linkbox_3 {
+        padding-left: 15px;
+    }
+    .linkbox {
+        border-top: 1px solid #868686;
+        border-right: 1px solid #868686;
+        border-bottom: none;
+        border-left: 1px solid #868686;
+    }
+    .linkbox_1 .linkbox,
+    .linkbox_3 .linkbox {
+        border-right: none;
+    }
+    .linkbox_3 .linkbox,
+    .linkbox_4 .linkbox {
+        border-bottom: 1px solid #868686;
+    }
+}
+/*  -----  @media screen and (max-width: 767px)ここまで  -----  */
+
+/* //////////////////// 新着情報 //////////////////// */
+.news {
+    padding-bottom: 15px;
+}
+.news h2 {
+    font-weight: bold;
+    border-bottom: 5px solid #90d7ed;
+    letter-spacing: 1em;
+}
+.news dl {
+    overflow: auto;
+    height : 10em;
+}
+/* //////////////////// マップ //////////////////// */
+.map {
+    margin-top: 1em;
+}
+.address {
+    font-size: 1.1em;
+    margin-top: 1em;
+}
+.tel,
+.fax {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.tel span,.fax span {
+    color: #868686;
+    margin-right: 1em;
+}
+
+/* //////////////////// フッター //////////////////// */
+#footer {
+    height:120px;
+    background-color: #90d7ed;
+}
+
+/* //////////////////// padding調整用 //////////////////// */
+.sitetitle_pdg {
+    padding-left: 15px;  /* sitetitle */
+    padding-right: 15px; /* sitetitle */
+}
